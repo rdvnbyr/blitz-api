@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'MyAPI',
+      name: 'Blitz Dispatch API',
       script: 'dist/index.js',
       instances: 1,
       autorestart: true,

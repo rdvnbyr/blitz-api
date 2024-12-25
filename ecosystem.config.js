@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'Blitz Dispatch API',
+      name: 'BlitzAPI',
       script: 'dist/index.js',
       instances: 1,
       autorestart: true,
@@ -15,17 +15,4 @@ module.exports = {
       },
     },
   ],
-
-  // deploy: {
-  //   production: {
-  //     user: 'SSH_USERNAME',
-  //     host: 'SSH_HOSTMACHINE',
-  //     ref: 'origin/main',
-  //     repo: 'git@github.com:rdvnbyr/blitz-dispatch.git',
-  //     path: 'DESTINATION_PATH',
-  //     'pre-deploy-local': '',
-  //     'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env production',
-  //     'pre-setup': '',
-  //   },
-  // },
 };

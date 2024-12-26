@@ -4,12 +4,12 @@ import {juggler} from '@loopback/repository';
 const config = {
   name: 'blitz',
   connector: 'mysql',
-  url: 'mysql://blitz:X1g_8yk25@localhost:3306/db_blitz',
+  url: 'mysql://blitz-devooby:94f7o8I&a@localhost:3306/db_blitz-devooby',
   host: 'localhost',
   port: 3306,
-  user: 'blitz',
-  password: 'X1g_8yk25',
-  database: 'db_blitz',
+  user: 'blitz-devooby',
+  password: '94f7o8I&a',
+  database: 'db_blitz-devooby',
 };
 
 // Observe application's life cycle to disconnect the datasource when

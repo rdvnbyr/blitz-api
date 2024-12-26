@@ -36,7 +36,7 @@
     "rebuild": "npm run clean && npm run build",
     "start": "pm2 start ecosystem.config.js --env production",
     "stop": "pm2 stop ecosystem.config.js --env production",
-    "start:dev": "node -r source-map-support/register ."
+    "dev": "node -r source-map-support/register ."
   },
   "repository": {
     "type": "git",

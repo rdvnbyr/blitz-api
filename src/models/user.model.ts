@@ -1,13 +1,7 @@
 import {Entity, model, property} from '@loopback/repository';
 
-@model({settings: {strict: false}})
+@model({settings: {mysql: {schema: 'db_blitz-devooby', table: 'User'}, idInjection: false}})
 export class User extends Entity {
-  @property({
-    type: 'string',
-    required: true,
-  })
-  first_name: string;
-
   @property({
     type: 'number',
     id: true,
@@ -28,17 +22,26 @@ export class User extends Entity {
     type: 'string',
     required: true,
   })
+  first_name: string;
+
+  @property({
+    type: 'string',
+    required: true,
+  })
   last_name: string;
 
   @property({
     type: 'string',
     default: '',
   })
-  image?: string;
+  avatar?: string;
 
   @property({
     type: 'string',
     required: true,
+    jsonSchema: {
+      enum: ["admin", "user", "guest"],
+    },
   })
   role: string;
 
@@ -46,13 +49,19 @@ export class User extends Entity {
     type: 'string',
     required: true,
   })
-  salutation: string;
+  password: string;
 
   @property({
     type: 'date',
     default: () => new Date(),
   })
   created_at?: string;
+
+  @property({
+    type: 'date',
+    default: () => new Date(),
+  })
+  updated_at?: string;
 
   // Define well-known properties here
 
